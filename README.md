@@ -6,7 +6,7 @@ This is an app that is used as a search engine to search for books. It uses grap
 ### GitHub Profile
   [GitHub Profile](https://github.com/TWFB29/BookSearchEngine)
 ### Heroku app
-    [Heroku app](https://aqueous-reaches-14546.herokuapp.com/)
+[Heroku app](https://aqueous-reaches-14546.herokuapp.com/)
   ### Email address
   [e-mail address](twfb29@yahoo.com)
 
