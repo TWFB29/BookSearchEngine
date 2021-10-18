@@ -4,19 +4,14 @@ import {
   ApolloClient,
   InMemoryCache,
   ApolloProvider,
-  newHttpLink,
+  createHttpLink,
 } from '@apollo/client';
 import { setContext } from '@apollo/client/link/context';
 import SearchBooks from './pages/SearchBooks';
 import SavedBooks from './pages/SavedBooks';
 import Navbar from './components/Navbar';
 
-const client = new ApolloClient({
-  link: authLink.concat(httpLink),
-  cache: new InMemoryCache(),
-});
-
-const httpLink = newHttpLink({
+const httpLink = createHttpLink({
   uri: '/graphql',
 });
 
@@ -29,6 +24,13 @@ const authLink = setContext((_, { headers }) => {
     },
   };
 });
+
+const client = new ApolloClient({
+  link: authLink.concat(createHttpLink),
+  cache: new InMemoryCache(),
+});
+
+
 
 
 function App() {
